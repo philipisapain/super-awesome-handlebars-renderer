@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<h1>Super-Awesome Handlebars Renderer</h1>
+<div class="container">
+	<div class="col col-md-7">
+		<p>Handlebars Template</p>
+		<textarea id="template" wrap='off'></textarea>
+	</div>
+	<div class="col col-md-5">
+		<p>JSON data</p>
+		<textarea id="json" wrap='off'></textarea>
+		<button id="render">Render</button>
+	</div>
+
+	<div class="col-md-12" id="parse-errors-container">
+		<ul id="parse-errors-list"></ul>
+	</div>
+
+	<div class="col-md-12">
+		<iframe id="preview"></iframe>
+	</div>
+</div>
+<script src="./app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "super-awesome-handlebars-renderer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/server.js",
+  "scripts": {
+    "build": "tsc && lessc ./src/less/main.less ./bin/css/main.css && browserify ./src/client.js --debug --fast > ./bin/app.js",
+    "start": "npm install && npm run build && node ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "browserify": "^12.0.1",
+    "handlebars": "^4.0.4",
+    "jquery": "^2.1.4",
+    "less": "^2.5.3",
+    "node-static": "^0.7.7",
+    "typescript": "^1.6.2"
+  }
+}

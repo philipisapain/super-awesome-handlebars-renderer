@@ -1,0 +1,8 @@
+node_modules
+*.iml
+.idea
+src/**/*.js
+bin/**/*.js
+bin/**/*.css
+*.map
+typings
