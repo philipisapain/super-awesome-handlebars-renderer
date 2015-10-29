@@ -9,3 +9,5 @@ Also displays a handy error message if you're missing some values. (Since handle
 Clone and run `npm start` to install, build and run a server at `http://localhost:3003`.
 
 ![Super-Awesome Handlebars Renderer](https://cloud.githubusercontent.com/assets/2233641/10826570/3f0656e2-7e62-11e5-8734-10f95fe8bb48.png)
+
+![Super-Awesome Handlebars Renderer Errors](https://cloud.githubusercontent.com/assets/2233641/10826647/b2ff116a-7e62-11e5-9f91-00b08c76f734.png)
