@@ -12,10 +12,7 @@ var preview:JQuery = $("#preview");
 registerHelpers();
 loadValuesFromStorage();
 
-renderButton.on("click", function()
-{
-	doRender();
-});
+renderButton.on("click", doRender);
 
 doRender();
 
@@ -37,7 +34,7 @@ function loadValuesFromStorage()
 	jsonInput.val(jsonString);
 }
 
-$(window).unload(function()
+$(window).unload(() =>
 {
 	sessionStorage.setItem("template", templateInput.val());
 	sessionStorage.setItem("json", jsonInput.val());
@@ -45,15 +42,15 @@ $(window).unload(function()
 
 function registerHelpers()
 {
-	Handlebars.registerHelper("safehtml", function(context:any, options:any)
+	Handlebars.registerHelper("safehtml", (context:any, options:any) =>
 	{
 		return "SAFEHTML";
 	});
 
-	Handlebars.registerHelper("helperMissing", function(context:any, options:any)
+	Handlebars.registerHelper("helperMissing", (context:any, options:any) =>
 	{
-		appendParseError("{{" + context.name + "}} has no value specified.");
-		return "{{" + context.name + "}}";
+		appendParseError(`{{${context.name}}} has no value specified.`);
+		return `{{${context.name}}}`;
 	});
 }
 
@@ -72,7 +69,7 @@ function doRender()
 	}
 	catch(error)
 	{
-		console.error("Error rendering template: " + error);
+		console.error(`Error rendering template: ${error}`);
 	}
 	if(!parseErrorsList.children().length)
 	{
@@ -85,7 +82,7 @@ function doRender()
 
 function appendParseError(error:string)
 {
-	var parseErrorElement = $("<li class='parse-error'>" + error + "</li>");
+	var parseErrorElement = $(`<li class='parse-error'>${error}</li>`);
 	parseErrorsList.append(parseErrorElement);
 }
 
